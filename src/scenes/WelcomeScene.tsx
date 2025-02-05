@@ -66,7 +66,7 @@ function WelcomeScene() {
                 repeat={1}
                 cursor={false}
             />
-            <img src="/cat_welcome.gif" alt="cat_welcome_gif"/>
+            <img src="/public/cat_welcome.gif" alt="cat_welcome_gif"/>
             <b style={{fontSize: '20px'}}>Для тебя есть особое послание! Но для начала тебе нужно прочитать три очень
                 затягивающие истории</b>
             <div className="stories">
