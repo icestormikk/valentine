@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..900&display=swap');
 
-:root {
+#root {
     font-family: 'Comfortaa', italic, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -40,6 +40,7 @@ button {
     font-family: 'Comfortaa', cursive;
     background-color: #FF6F91;
     cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,17 +57,4 @@ button:focus-visible {
 }
 button:disabled {
     color: rgba(255, 255, 255, 0.8);
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
 }

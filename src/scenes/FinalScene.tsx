@@ -16,7 +16,6 @@ enum FinalSceneStates {
 
 function FinalScene() {
     const [state, setState] = React.useState<FinalSceneStates|null>(null);
-    const [headerText, setHeaderText] = React.useState('Согласишься ли ты быть моей любовью до конца времён?')
     const [noButtonText, setNoButtonText] = React.useState<string>('Нет');
     const [gifPath, setGifPath] = React.useState('/valentine_suggestion.gif');
     const [showOverlay, setShowOverlay] = React.useState(false);
@@ -54,14 +53,13 @@ function FinalScene() {
     React.useEffect(() => {
         switch (state) {
             case FinalSceneStates.SUGGESTION:
-                setGifPath('/valentine_suggestion.gif');
+                setGifPath('/valentine/valentine_suggestion.gif');
                 break;
             case FinalSceneStates.YES:
-                setHeaderText('Ураааааа');
-                setGifPath('/valentine_yes.gif');
+                setGifPath('/valentine/valentine_yes.gif');
                 break;
             case FinalSceneStates.NO_0:
-                setGifPath('/valentine_no.gif');
+                setGifPath('/valentine/valentine_no.gif');
         }
 
     }, [state]);
@@ -75,7 +73,7 @@ function FinalScene() {
                         тебе за то, что ты рядом!</h1>
                 ) : (
                     <TypeAnimation
-                        sequence={["3", 2000, "2", 2000, "1", 2000, () => setState(FinalSceneStates.SUGGESTION), headerText]}
+                        sequence={["3", 2000, "2", 2000, "1", 2000, () => setState(FinalSceneStates.SUGGESTION), 'Согласишься ли ты быть моей любовью до конца времён?']}
                         cursor={false}
                         speed={50}
                         wrapper="h1"
