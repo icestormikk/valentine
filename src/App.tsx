@@ -17,9 +17,9 @@ function App() {
         <AnimatePresence mode="wait">
             <StoriesContext.Provider value={{ readStoryIds: readStoryIds, setReadStoryIds: setReadStoryIds }}>
                 <Routes location={location} key={locationArr[1]}>
-                    <Route path="/" element={<WelcomeScene/>} />
-                    <Route path="/story" element={<StoryScene/>} />
-                    <Route path="/final" element={<FinalScene/>} />
+                    <Route path="/valentine/" element={<WelcomeScene/>} />
+                    <Route path="/valentine/story" element={<StoryScene/>} />
+                    <Route path="/valentine/final" element={<FinalScene/>} />
                 </Routes>
             </StoriesContext.Provider>
         </AnimatePresence>
